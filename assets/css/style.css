@@ -1,0 +1,51 @@
+style.css
+body
+     {
+        margin: 5px;
+      }
+      
+      h1 {
+        text-align: center;
+        margin: -50px 10px;
+      }
+
+      h2 {
+        text-align: left;
+        font-size: 16px;
+        margin: 100px 0px 5px 0px;
+      }
+
+.image-container {
+    position: relative; 
+    width: 200%; 
+    height: 300px; 
+    border: 1px solid #ccc; 
+  }
+  
+  .image {
+    position: absolute; 
+    top: 20px; 
+    left: 280px; 
+    width: 150px; 
+    height: auto;
+  }
+
+body {
+    border: 5px solid #000000;
+    padding: 20px;
+  }
+  
+  /* Bordure autour de la div */
+  .content {
+    border: 5px solid #3498db;
+    padding: 250px;
+    border-radius: 90px; /* Coins arrondis */
+  }
+  
+  /* Bordure autour de l'image */
+  img {
+    border: 2px dashed #4766ff;
+    width: 100px;
+    height: auto;
+    border-radius: 50%; /* Bordure arrondie en forme de cercle */
+  }
