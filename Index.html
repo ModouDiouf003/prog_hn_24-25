@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta name="viewport" content="width-divice.width, initial-scale=1">
+        <meta name="viewport" content="width-device.width, initial-scale=1", charset="utf-8">
         <title>Programmation pour les humainités numériques. </title>
         <link rel="stylesheet" href="assets/css/style.css">
+        <script src="js/devoirstring.js" defer></script>
     </head>
 
-    <body>
-        <div class="content">
+<body>
+      <div class="content">
         
        <div class="image container">
          <img src="assets/img/avatar.png" alt="Image à déplacer" class="image">
-       </div>
+      </div>
        <h1>Modou Diouf</h1>
-       <h2>Le prcours:</h2>
+       <h2>Etudiant en M1 science du langage</h2>
+       <h3>Le prcours:</h2>
 
        <table border="1">
     <tr>
@@ -35,7 +37,35 @@
         <td>2024</td>
         <td>Master en SIC</td>
         <td>Sous l'orage</td>
-      </tr>
-      </table>
-    </body>
+    </tr>
+     </table>
+  <div> 
+    <h4>Formulaire Prénom et Nom</h4>
+    
+    <label for="prenom">Prénom: </label>
+    <input type="text" id="prenom" placeholder="Entrez votre prénom">
+    <br><br>
+
+    <label for="nom">Nom: </label>
+    <input type="text" id="nom" placeholder="Entrez votre nom">
+    <br><br>
+
+    <button onclick="afficherPrenom()">Afficher Prénom</button>
+    <button onclick="afficherNom()">Afficher Nom</button>
+    <button onclick="afficherNomComplet()">Afficher Nom Complet</button>
+    
+    <div id="resultat"></div>
+
+    <hr>
+
+    <h2>Segmenter un texte</h2>
+    <textarea id="texte" rows="10" cols="50" placeholder="Entrez un texte ici..."></textarea>
+    <br>
+    <button onclick="segmenterTexte()">Segmenter le texte</button>
+
+    <div id="resultatSegmente"></div> 
+    
+  </div>
+  
+</body>
 </html>
