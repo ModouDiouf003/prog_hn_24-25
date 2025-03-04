@@ -61,11 +61,43 @@
     <h2>Segmenter un texte</h2>
     <textarea id="texte" rows="10" cols="50" placeholder="Entrez un texte ici..."></textarea>
     <br>
+    <br>
     <button onclick="segmenterTexte()">Segmenter le texte</button>
 
     <div id="resultatSegmente"></div> 
     
   </div>
+
+  <br><br>
   
+    <label for="nomUtilisateur">Comment vous appelez-vous ?</label>
+    <input type="text" id="nomUtilisateur" placeholder="Entrez votre nom">
+    <button id="btnBonjour">Bonjour</button>
+
+    <br><br>
+
+    <!-- Bouton pour afficher/cacher l'aide -->
+    <div class="ligne">
+      <button id="btnAide">Afficher l'aide</button>
+  </div>
+
+  <!-- Texte d'aide caché par défaut -->
+  <div id="aide" style="display: none;" class="ligne">
+      <p>Ici, on va afficher l'aide.</p>
+  </div>
+
+  <br><br>
+
+  <!-- Bouton pour téléverser un fichier, aligné avec le texte -->
+  <div class="ligne">
+      <label for="fileInput">Sélectionner un fichier au format .txt :</label>
+      <input type="file" id="fileInput" accept=".txt">
+  </div>
+
+  <!-- Affichage du contenu du fichier -->
+  <div class="ligne">
+      <p id="fileContent"></p>
+  </div>
+
 </body>
 </html>

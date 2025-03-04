@@ -57,3 +57,53 @@ function segmenterTexte() {
         document.getElementById('resultatSegmente').textContent = "Veuillez entrer un texte à segmenter.";
     }
 }
+
+document.addEventListener("DOMContentLoaded", function() { 
+    // Attendre que la page soit complètement chargée
+
+    document.getElementById("btnBonjour").addEventListener("click", function() {
+        let nomUtilisateur = document.getElementById("nomUtilisateur").value.trim(); // Récupère la valeur du champ
+
+        console.log("Nom entré :", nomUtilisateur); // Debugging pour voir si le nom est bien récupéré
+
+        if (nomUtilisateur !== "") {
+            alert("Bonjour " + nomUtilisateur + " !");
+        } else {
+            alert("Bonjour !");
+        }
+    });
+
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+
+    // Fonction pour afficher ou cacher l'aide
+    document.getElementById("btnAide").addEventListener("click", function() {
+        let aideDiv = document.getElementById("aide");
+        if (aideDiv.style.display === "none") {
+            aideDiv.style.display = "block";
+            this.textContent = "Cacher l'aide";
+        } else {
+            aideDiv.style.display = "none";
+            this.textContent = "Afficher l'aide";
+        }
+    });
+
+    // Fonction pour lire le fichier téléversé
+    document.getElementById("fileInput").addEventListener("change", function(event) {
+        let file = event.target.files[0];
+
+        if (file && file.type === "text/plain") {
+            let reader = new FileReader();
+            reader.onload = function(e) {
+                document.getElementById("fileContent").textContent = e.target.result;
+            };
+            reader.readAsText(file);
+        } else {
+            alert("Veuillez sélectionner un fichier .txt !");
+        }
+    });
+
+});
+
+
