@@ -1,4 +1,3 @@
-// Fonction pour afficher uniquement le prénom
 function afficherPrenom() {
     let prenom = document.getElementById('prenom').value;
     if (prenom) {
@@ -8,7 +7,6 @@ function afficherPrenom() {
     }
 }
 
-// Fonction pour afficher uniquement le nom
 function afficherNom() {
     let nom = document.getElementById('nom').value;
     if (nom) {
@@ -18,7 +16,6 @@ function afficherNom() {
     }
 }
 
-// Fonction pour afficher le nom complet
 function afficherNomComplet() {
     let prenom = document.getElementById('prenom').value;
     let nom = document.getElementById('nom').value;
@@ -29,20 +26,15 @@ function afficherNomComplet() {
     }
 }
 
-// Fonction pour segmenter le texte en utilisant le point comme délimiteur
 function segmenterTexte() {
-    // Récupérer le texte de la zone de texte
     let texte = document.getElementById('texte').value;
    
 
-    // Vérifier que le texte n'est pas vide
     if (texte) {
-        // Segmenter le texte en utilisant le point comme délimiteur
         let segments = texte.split('.').map(segment => segment.trim()).filter(segment => segment !== '');
 
-        // Afficher les segments sous forme de liste
         let resultatSegmente = document.getElementById('resultatSegmente');
-        resultatSegmente.innerHTML = '';  // Réinitialiser l'affichage des résultats
+        resultatSegmente.innerHTML = '';  
 
         if (segments.length > 0) {
             segments.forEach((segment, index) => {
@@ -59,12 +51,11 @@ function segmenterTexte() {
 }
 
 document.addEventListener("DOMContentLoaded", function() { 
-    // Attendre que la page soit complètement chargée
 
     document.getElementById("btnBonjour").addEventListener("click", function() {
-        let nomUtilisateur = document.getElementById("nomUtilisateur").value.trim(); // Récupère la valeur du champ
+        let nomUtilisateur = document.getElementById("nomUtilisateur").value.trim();
 
-        console.log("Nom entré :", nomUtilisateur); // Debugging pour voir si le nom est bien récupéré
+        console.log("Nom entré :", nomUtilisateur); 
 
         if (nomUtilisateur !== "") {
             alert("Bonjour " + nomUtilisateur + " !");
@@ -77,7 +68,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
 document.addEventListener("DOMContentLoaded", function() {
 
-    // Fonction pour afficher ou cacher l'aide
     document.getElementById("btnAide").addEventListener("click", function() {
         let aideDiv = document.getElementById("aide");
         if (aideDiv.style.display === "none") {
@@ -89,7 +79,6 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 
-    // Fonction pour lire le fichier téléversé
     document.getElementById("fileInput").addEventListener("change", function(event) {
         let file = event.target.files[0];
 
@@ -105,5 +94,17 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
 });
+
+function exercice4() {
+    let texte = document.getElementById("texteExercice4").value;
+    let tokens = texte.split(" ");
+    let table = document.createElement("table");
+    tokens.forEach(mot => {
+        let row = document.createElement("tr");
+        row.innerHTML = mot;
+        table.appendChild(row);
+    });
+    document.getElementById("exercice4Resultat").appendChild(table);
+}
 
 

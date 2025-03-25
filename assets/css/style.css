@@ -1,53 +1,41 @@
-style.css
-body {
-  margin: 50px;
-  background-color: gold;
-} 
-      h1 {
-        text-align: center;
-        margin: -70px 20px;
-      }
+html {
+  font-family: 'Times New Roman', Times, serif;
+  background-color: bisque;
+  margin: 150px;
+  padding: 100px;
+  border: 10px;
+}
 
-      h2 {
-        text-align: center;
-        margin: 70px 5px;
-      }
 
-      h3 {
-        text-align: left;
-        font-size: 16px;
-        margin: 100px 0px 5px 0px;
-      }
-
-.image-container {
-    position: relative; 
-    width: 200%; 
-    height: 300px; 
-    border: 1px solid #ccc; 
+.image {
+   position: absolute; 
+   top: 20px; 
+   left: 280px; 
+   width: 150px; 
+   height: auto;
   }
-  
-  .image {
-    position: absolute; 
-    top: 20px; 
-    left: 280px; 
-    width: 150px; 
-    height: auto;
+  h1{
+    text-align: center;
+    ;margin: 30px;
   }
-
-body {
-    border: 10px solid #000000;
-    padding: 30px;
+  h2{
+    text-align: center;
   }
-  
-  .content {
-    border: 10px solid #3498db;
-    padding: 250px;
-    border-radius: 90px; 
+  h3{
+    text-align: left;
+    margin: 10px;
+    padding: 20px;
   }
-  
-  img {
-    border: 2px dashed #4766ff;
-    width: 100px;
-    height: auto;
-    border-radius: 50%; 
+  table{
+    padding: 20px;
+  }
+  h4{
+    text-align: center;
+    font-size: 18px;
+  }
+  footer{
+    text-align: center;
+  }
+  <div> class= ::content{
+    position: relative;
   }
