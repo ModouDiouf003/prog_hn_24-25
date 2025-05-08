@@ -1,122 +1,226 @@
-html {
-  font-family: 'Times New Roman', Times, serif;
-  background-color: bisque;
-  margin: 150px;
-  padding: 100px;
-  border: 10px;
+html { /* pour cette partie, commentez et personnalisez au moins 12lignes. exemple ligne2 : font-size: 16px; font-size signifie "taille des caractères". px signifie .. et diffère de rem pour x raisons. */
+	font-size: 14px;
+	width: 100vw;
+	font-family: "Lucida Console", "Courier New", monospace;
+	background-color:#fff; /*chqngement de la couleur de bas*/
+}
+
+h1 {
+	font-size: 4.5rem;
+}
+
+h2 {
+	font-size: 2rem;
+}
+
+h1, h2 {
+	color: black;
+	text-shadow: 0px 0px 5px black, 0px 0px 10px white, 0px 0px 10px ;
+} /* nombre de couleur utilisés réduite et modifié*/
+
+h3 {
+  font-size: 4rem;
+  font-weight: 600;
+  font-family: 'Niconne', cursive;
+  color: #e0d6e9;
+  text-shadow:	2px 2px 0px  #957dad,
+  						4px 4px 0px #ee4b2b,
+               			6px 6px 0px #00c2cb,
+               			8px 8px 0px #ff7f50,
+               			10px 10px 0px #553c9a;
 }
 
 
-.image {
-   position: absolute; 
-   top: 20px; 
-   left: 280px; 
-   width: 150px; 
-   height: auto;
-  }
-  h1{
-    text-align: center;
-    ;margin: 30px;
-  }
-  h2{
-    text-align: center;
-  }
-  h3{
-    text-align: left;
-    margin: 10px;
-    padding: 20px;
-  }
-  table{
-    padding: 20px;
-  }
-  h4{
-    text-align: center;
-    font-size: 18px;
-  }
-  footer{
-    text-align: center;
-  }
-  <div> class= ::content{
-    position: relative;
-  }
 
-  .mylabel {
-    background-color: rgb(255, 204, 51);
-    font-family: arial,helvetica,sans-serif;
-    font-variant: small-caps;
-    font-size: 90%;
-    padding: 2px;
-    border-right: 1px solid rgb(204, 153, 0);
-    border-bottom: 1px solid rgb(204, 153, 0);
-  }
+.entete {
+	text-align: center;
+}
+
+#aboutme {
+	margin: 15px;
+	border-color: DarkSlateGrey;
+	background-color: rgb(206 206 156);
+	padding: 4rem;
+	position: relative;
+	border: 3px solid black;
+}
+
+footer {
+    text-align: center;
+}
+
+table, th, td {
+  border: 1px solid;
+}
+
+td, th {
+	padding: 1px 8px;
+}
+
+#logo {
+	text-align: left;
+}
+
+.fade { 
+	background-color: green; /* changement de la couleur de base */
+	color: Black;
+	transition: background-color 1s;
+	font-family: "Lucida Console", "Courier New", monospace;
+}
+
+.fade:hover { /* commenter et personnaliser*/
+	background-color: rgb(198 213 74);
+}
+
+.mylabel {
+	background-color: green;
+	font-family: arial,helvetica,sans-serif;
+	font-variant: small-caps;
+	font-size: 90%;
+	padding: 2px;
+	border-right: 1px solid green;
+	border-bottom: 1px solid green;
+	border-radius: 50% 20% / 10% 40%;
+} /* cette partie au dessus concerne les éléments du labo pour effectuer l'analyse*/
+
+#container {
+	background-color: green;
+	border: 3px solid black;
+	padding: 2px;
+	padding-bottom: 5%;
+	width: 80%;
+	margin-left:10%;
+	height: 100%;
+	min-height: 100%;
+	position: relative;
+} /* cette partie est l'espace contenuer du labo et du filedisplay area*/
+
+#page-wrapper {
+	width: 600px;
+	background: white;
+	padding: 1em;
+	margin: 1em auto;
+	box-shadow: 0 2px 10px rgba(0,0,0,0.8);
+*} /* celle là est la case réservé au élément d'analyse (seg, dict, N de mot, grep...*/
+
+#Global {
+	margin-right: auto;
+	margin-left: auto;
+	width: 80%;
+	border: 3px;
+	display:table;
+}
+#Global #fileDisplayArea {
+	float:left;
+	width:48%;
+	font-size:0.6em;
+	height:200px;
+	
+}
+
+
+#Global #page-analysis {
+	margin-left:52%;
+	background: green;
+	height:200px;
+	
+} /* Ces trois bloques au dessus c'est la partie consacrée à l'affichage des résultats de l'analyse effectuer*/
+
+#chartContainer {
+	padding-top: 5%;
+}
+
+#logger3{
+	color:red;
+}
+
+
+
+/* Ce qui est en dessous concerne le camembèrt */
+
+.special{
+  position: relative;
+  padding: 0.9em 0.9em;
+  border: none;
+  background-color:transparent;
+  cursor: pointer;
+  outline: none;
+  font-size: 12px;
+  margin: 2em 0.4em;
+  font-family: "Lucida Console", "Courier New", monospace;
+}
+
+.special::after,
+.special::before{
+	content: '';
+	position: absolute;
+	display:block;
+	width: 60%;
+	height: 40%;
+	border: 5px solid;
+   	transition: all 0.5s ease;
+   	border-radius: 6px;
+}
+.special::after{
+      bottom: 0;
+      right: 0;
+      border-top-color: transparent;
+      border-left-color: transparent;
+      border-bottom-color: #0f4137;
+      border-right-color: #0f4137;
+     }
+     
+.special::before{
+      top: 0;
+      left: 0;
+      border-bottom-color: transparent;
+      border-right-color: transparent;
+      border-top-color: #12776f;
+      border-left-color: #12776f;
+}
+
+.special:hover:after,
+.special:hover:before{
+      width: 100%;
+      height: 100%;
+}
+
+
+/* Ce qui est en dessus concerne lapartie du lien vers SN */
+
+.rainbowBtn {
+	display: block;
+	margin : auto;
+	 width: 200px;
+	 height: 60px;
+	 text-align: center;
+	 line-height: 60px;
+	 color: #fff;
+	 font-size: 15px;
+	 text-decoration: none;
+	 font-family: "Lucida Console", "Courier New", monospace;
+	 box-sizing: border-box;
+	 background: linear-gradient(90deg, green, #ffeb3b, red);
+	 background-size: 400%;
+	 border-radius: 30px;
+	 z-index: 1;
+}
+
+.rainbowBtn:hover {
+ animation: animate 8s linear infinite;
+}
+@keyframes animate {
+ 0% {
+  background-position: 0%;
+ }
+ 100% {
+  background-position: 400%;
+ }
+}
+
+
+
+
+
+
   
-  .infolog {
-    text-align:center;
-    border: 2pt solid rgb(0, 128, 0);
-    padding: 1pt;
-    margin-left: 0px;
-    margin-right: 0px;
-    background: rgb(128, 255, 128);
-  }
-  
-  .errorlog {
-    text-align:center;
-    border: 2pt solid rgb(255, 0, 0);
-    padding: 2pt;
-    margin-left: 0px;
-    margin-right: 0px;
-    background-color: rgb(255, 96, 96);
-  }
-  
-  #page  {
-    position: relative;
-    min-height: 100%;
-  }
-  
-  #container {
-    background-color: white;
-    border: 3px solid black;
-    padding: 2px;
-    padding-bottom: 5%; 
-    width: 80%;
-    margin-left:10%;
-    height: 100%;
-    min-height: 100%;
-    position: relative;
-  }
-  
-  #page-wrapper {
-    width: 600px;
-    background: #cee1fd;
-    padding: 1em;
-    margin: 1em auto;
-    border-top: 5px solid #69c773;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.8);
-  }
-  
-  #Global {
-    margin-right: auto; 
-    margin-left: auto; 
-    width: 80%; 
-    border: 3px; 
-    display:table;
-  }
-  #Global #fileDisplayArea {
-    float:left;
-    width:48%;
-    background: #FFF;
-    font-size:0.6em;
-    height:200px;
-    overflow:scroll;
-  }
-  #Global #page-analysis {
-    margin-left:52%;
-    background: #FFF;
-    height:200px;
-    overflow:scroll;
-  }
-  
-  h1 {
-    margin-top: 0;
-    color:black;
-  }

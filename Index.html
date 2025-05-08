@@ -1,167 +1,156 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta name="viewport" content="width-device.width, initial-scale=1", charset="utf-8">
-        <title>Programmation pour les humainités numériques. </title>
-        <link rel="stylesheet" href="assets/css/style.css">
-        <script src="js/devoirstring.js" defer></script>
-    </head>
-
-<body>
-      <div class="content">
-        
-      <div class="image container">
-         <center><img src="assets/img/avatar.png" alt="Image à déplacer" class="image"></center>
-      </div>
-      
-      <br><br>
-
-       <h1>Modou Diouf</h1>
-       <h2>Etudiant en M1 science du langage</h2>
-       <h3>Le prcours:</h2>
-
-       <table border="1">
-    <tr>
-      <th>année</th>  
-      <th>Mon CV ces trois dernières années</th>
-      <th>Mes cinq dernières lectures</th>
-    </tr>
-    <tr>
-      <td>2022</td>
-      <td>L3 en SDL</td>
-      <td>Cacophonie, L'aine des orphrlins</td>
-    </tr>
-    <tr>
-      <td>2023</td>
-      <td>M1 en SIC</td>
-      <td>L'aipee dialectique,  A leap out of the dark</td>
-    </tr>
-    <tr>
-        <td>2024</td>
-        <td>Master en SIC</td>
-        <td>Sous l'orage</td>
-    </tr>
-     </table>
-  <div> 
-
-    <br><br>
-    
-    <h4>Formulaire Prénom et Nom</h4>
-    
-    <label for="prenom">Prénom: </label>
-    <input type="text" id="prenom" placeholder="Entrez votre prénom">
-    <br><br>
-
-    <label for="nom">Nom: </label>
-    <input type="text" id="nom" placeholder="Entrez votre nom">
-    <br><br>
-
-    <button onclick="afficherPrenom()">Afficher Prénom</button>
-    <button onclick="afficherNom()">Afficher Nom</button>
-    <button onclick="afficherNomComplet()">Afficher Nom Complet</button>
-    
-    <br><br>
-
-    <div id="resultat"></div>
-
-    <hr>
-
-    <h2>Segmenter un texte</h2>
-    <textarea id="texte" rows="10" cols="50" placeholder="Entrez un texte ici..."></textarea>
-    <br>
-    <br>
-    <button onclick="segmenterTexte()">Segmenter le texte</button>
-
-    <div id="resultatSegmente"></div> 
-    
-  </div>
-
-  <br><br>
-  
-    <label for="nomUtilisateur">Comment vous appelez-vous ?</label>
-    <input type="text" id="nomUtilisateur" placeholder="Entrez votre nom">
-    <button id="btnBonjour">Bonjour</button>
-
-    <br><br>
-
-    <div class="ligne">
-      <button id="btnAide">Afficher l'aide</button>
-  </div>
-
-  <div id="aide" style="display: none;" class="ligne">
-      <p>Ici, on va afficher l'aide.</p>
-  </div>
-
-  <br><br>
-
-  <div class="ligne">
-      <label for="fileInput">Sélectionner un fichier au format .txt :</label>
-      <input type="file" id="fileInput" accept=".txt">
-  </div>
-
-  <div class="ligne">
-      <p id="fileContent"></p>
-  </div>
-
-  <br><br>
-
-  <div id="page">
-    <div id="container">
-        <h1 style="text-align:center;">Analyse des <span style="color:green">données</span> dans un fichier</h1>
-
-        <div id="page-wrapper">
-            <div>
-                <span>
-                    <label for="fileInput" class="btn"><small>Sélectionner un fichier au format .txt
-                            :</small></label>
-                    <input id="fileInput" type="file" accept="text/plain" name="Fichier (.txt)" />
-                </span>
-            </div>
-            <br />
-            <p style="text-align:center;">
-                <small>
-                    <label for="delimID" class="mylabel">Délimiteur(s)</label>
-                    &nbsp;
-                    <input type="text" value=" ,;’'~|&#@=`-.?!%*$()[]{}_:+«»§\/" name="delim" id="delimID" size="40" />
-                </small>
-                <br />
-                <small>
-                    <label for="poleID" class="mylabel">Pôle</label>
-                    &nbsp;
-                    <input type="text" placeholder="entrez un pôle..." name="pole" id="poleID" size="20" />
-                </small>
-                &nbsp;
-                <small>
-                    <label for="lgID" class="mylabel">Longueur</label>
-                    &nbsp;
-                    <input type="text" value="10" name="lg" id="lgID" size="10" />
-                </small>
-                <br />
-                <br />
-                <button onclick="alert('bonjour');"><span>Bonjour</span></button>
-                <br />
-                <br />
-                <button class="submit" onclick="alert('Je ne fais rien, changez-moi !');"><span>Segmentation</span></button>
-                <button class="submit" onclick="alert('Je ne fais rien, changez-moi !');"><span>action 1</span></button>
-                <button class="submit" onclick="alert('Je ne fais rien, changez-moi !')"><span>action 2</span></button>
-                <button class="submit" onclick="alert('Je ne fais rien, changez-moi !')"><span>action 3</span></button>
-                <button class="submit" onclick="alert('Je ne fais rien, changez-moi !')"><span>action 4</span></button>
-                <button class="submit" onclick="alert('Je ne fais rien, changez-moi !')"><span>action 5</span></button>
-                <button class="submit" onclick="alert('Je ne fais rien, changez-moi !')"><span>action 6</span></button>
-            </p>
+  <head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1"> <!-- Indique l'encodage UTF-8 et la mise en page responsive -->
+    <link rel="stylesheet" href="assets/css/style.css"> <!-- Lien vers la feuille de style -->
+    <script src="assets/js/main.js"></script> <!-- Lien vers le script JS principal -->
+    <script src="assets/js/canvasjs.min.js"></script> <!-- Lien vers le script CanvasJS pour les graphiques -->
+    <title>Page Analyse Textuelle</title> <!-- Titre de la page -->
+    <link rel="icon" href="assets/img/logo.png" type="image/icon type"> <!-- Icône de l'onglet -->
+  </head>
+  <body>
+    <div id="page">
+      <div class="entete">
+        <div id="logo">
+          <img src="assets/img/sorbonne-nouvelle-devise-trapezes.png" alt="logoSBN" width="20%" height="220%">
+          <!-- Logo de la Sorbonne Nouvelle -->
         </div>
-        <div id="logger" style="width:100%"></div>
+        <h1>Modou DIOUF</h1> <!-- Nom fictif de l'utilisateur -->
+        <h2>UFR LLD, campus Nation</h2> <!-- Département et campus -->
+        <img src="assets/img/profil.jpg" alt="photo_profil" width="10%" height="10%"> <!-- Photo de profil -->
+      </div>
+
+      <br><br><br>
+      <center>
+        <button id="button_aboutme" class="fade" onclick="showHide_aboutme()">Afficher mon CV</button> <!-- Bouton pour afficher/cacher la section à propos de moi -->
+      </center>
+
+      <br><br>
+      <div id="aboutme" style="display:none;"> <!-- Section cachée par défaut -->
+        <p id="cv">
+          <b>Mon CV :</b>
+          <table>
+            <thead>
+              <tr><th>Années</th><th>Parcours</th></tr> <!-- En-têtes de tableau -->
+            </thead>
+            <tbody>
+              <tr><td>2022-2023</td><td>Master1 Communication des Organisations</td></tr>
+              <tr><td>2023-2024</td><td>Master2 Communication des Organisations</td></tr>
+              <tr><td>2023-2024</td><td>Master Science du langage</td></tr> <!-- parcours modifié et compléter -->
+            </tbody>
+          </table>
+        </p>
+
+        <br>
+        <p id="lectures">
+          <b>Liste de mes dernières lectures :</b>
+          <ol>
+            <li><i>2022</i>, Les précursuers de l'histoire au Sénégal</li>
+            <li><i>2023</i>, L'épé dialectique</li>
+            <li><i>2024</i>, Intorduction à la pshycanalyse</li> <!-- lecture modifié et complété -->
+          </ol>
+        </p>
+
+        <p id="datetime">
+          <button class="fade" onclick="date_heure()" id="btn1">Cliquez pour afficher la date</button> <!-- Bouton pour afficher la date/heure -->
+          <p id="affichage_datetime"></p> <!-- Zone d'affichage de la date/heure -->
+        </p>
+      </div>
+
+      <br>
+      <!-- Analyse des données dans un fichier -->
+      <div id="container">
+        <h3 style="text-align:center;">Analyse des données dans un fichier</h3>
+        <div id="page-wrapper">
+          <div>
+            <center>
+              <button id="button_aide" class="fade" onclick="showHide_aide()">Afficher l'aide</button> <!-- Bouton pour afficher/cacher l'aide -->
+            </center>
+            <div id="aide" style="display:none;">
+              <p><i>Voici un mode d'emploi :</i></p>
+              <ul>
+                <li>Etape 1 : Chargez un texte au format .txt à l'aide du bouton Parcourir.</li>
+                <li>Etape 2 : Précisez les délimiteurs de votre choix puis cliquez sur le bouton Segmentation.</li>
+                <li>Bouton Dictionnaire : tableau des tokens et fréquences.</li>
+                <li>Bouton GREP : cherchez une regex ou un mot, lignes correspondantes s'affichent.</li>
+                <li>Bouton Concordancier : mot avec son contexte gauche/droit.</li>
+                <li>Bouton Nombre de phrases : compte les phrases dans le texte.</li>
+                <li>Bouton Mots les plus longs : affiche les 10 mots les plus longs.</li>
+                <li>Bouton Pie Chart : graphique des mots les plus fréquents hors stopwords.</li>
+                <li>Bouton /kujuj/ : ajoute "uj" à chaque mot du texte.</li>
+              </ul>
+            </div>
+          </div>
+
+          <br>
+          <div>
+            <span>
+              <label for="fileInput" class="btn">
+                <small>Sélectionner un fichier au format .txt :</small>
+              </label>
+              <input id="fileInput" type="file" accept="text/plain" name="Fichier (.txt)" /> <!-- Sélection de fichier -->
+            </span>
+          </div>
+
+          <br />
+          <p style="text-align:center;">
+            <small>
+              <label for="delimID" class="mylabel">Délimiteur(s)</label>
+              <input type="text" value=" ,;’'~|&#@=`%*$()[]{}_:+«»§\/" name="delim" id="delimID" size="40" /> <!-- Champ de délimiteurs -->
+            </small>
+            <br />
+            <small>
+              <label for="poleID" class="mylabel">Pôle</label>
+              <input type="text" placeholder="entrez un pôle..." name="pole" id="poleID" size="20" /> <!-- Champ pour entrer un mot/regex -->
+            </small>
+            &nbsp;
+            <small>
+              <label for="lgID" class="mylabel">Longueur</label>
+              <input type="text" value="10" name="lg" id="lgID" size="10" /> <!-- Longueur du contexte pour concordancier -->
+            </small>
+            <br />
+            <small>
+              <label for="stopwordID" class="mylabel">Stopwords (mots à exclure)</label>
+              <input type="text" value="de,le,la,les,à,et,des,un,une,du,que,en,l,qu,d,s,se,ne,n,ce,me,sa" name="stopwords" id="stopwordID" size="60" /> <!-- Liste des stopwords séparés par virgule -->
+            </small>
+            <br /><br />
+
+            <button class="special" onclick="alert('Voici un site qui permet d\'analyser des textes.');">
+              <span>Bonjour</span>
+            </button> <!-- Affiche une alerte -->
+
+            <br /><br />
+            <button onclick="segText()"><span>Segmentation</span></button>
+            <button class="purple" id="btnDict" onclick="dictionnaire()"><span>Dictionnaire</span></button>
+            <button class="fade" id="btnGrep" onclick="grep()"><span>GREP</span></button>
+            <button class="fade" onclick="concord()"><span>Concordancier</span></button>
+            <button class="fade" onclick="kujuj()"><span>/kujuj/</span></button>
+            <button class="fade" onclick="nbPhrases()"><span>Nombre de phrases</span></button>
+            <button class="fade" onclick="tokenLong()">Mots les plus longs</button>
+            <button class="fad" onclick="pieChart()"><span>grapheCamembert-Pie Chart</span></button>
+          </p>
+        </div>
+
+        <center>
+          <div id="logger1" style="width:100%"></div> <!-- Zone pour messages log -->
+          <div id="logger2" style="width:100%"></div>
+          <div id="logger3" style="width:100%"></div>
+        </center>
+
         <br />
         <div id="Global">
-            <div id="fileDisplayArea"></div>
-            <div id="page-analysis"></div>
+          <div id="fileDisplayArea"></div> <!-- Texte affiché -->
+          <div id="page-analysis"></div> <!-- Zone pour les tableaux -->
+          <div id="chartContainer" style="height: 300px; width: 100%;"></div> <!-- Graphique CanvasJS -->
         </div>
-    </div>
-</div>
+      </div>
 
-  <br><br>
-  <footer>
-    <p><a href="https://www.sorbonne-nouvelle.fr/">Cliquer ici pour se rendre au site de SN</a></p>
-  </footer>
-</body>
+      <!-- FIN Analyse des données -->
+      <footer>
+        <br><br>
+        <a href="https://www.univ-paris3.fr/" class="rainbowBtn">Site de l'Université Paris 3</a>
+        <br>
+      </footer>
+    </div>
+  </body>
 </html>
